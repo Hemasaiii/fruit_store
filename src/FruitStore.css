@@ -1,0 +1,88 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: hsl(253, 94%, 31%);
+  margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 00.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card img:not([src]), /* image not loaded */
+.card img[src=""],   /* empty src */
+.card img[src=""] {
+  display: none; /* hide broken image icon */
+}
+
+.card img + .alt-text {
+  display: none; /* hide by default */
+}
+
+.card img:not([src]) + .alt-text,
+.card img[src=""] + .alt-text {
+  display: block; /* show alt text if image fails */
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h2 {
+  font-size: 11.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-content p {
+  color: #2e7d32;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.card-content button {
+  width: 100%;
+  padding: 12px;
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card-content button:hover {
+  background: #e68900;
+}
